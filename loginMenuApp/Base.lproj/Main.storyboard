@@ -41,6 +41,9 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="logInAction" destination="lJR-pu-9Ri" eventType="touchUpInside" id="BYM-EO-Bf0"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="woG-R0-Ngi">
                                 <rect key="frame" x="30" y="444" width="315" height="30"/>
@@ -51,6 +54,9 @@
                                         <state key="normal" title="Fogot Username?">
                                             <color key="titleColor" systemColor="opaqueSeparatorColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="forgotUsernameAlert" destination="lJR-pu-9Ri" eventType="touchUpInside" id="4it-nj-HtX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7K-yd-4B7">
                                         <rect key="frame" x="165" y="0.0" width="150" height="30"/>
@@ -58,6 +64,9 @@
                                         <state key="normal" title="Forgot Password?">
                                             <color key="titleColor" systemColor="opaqueSeparatorColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="forgotPasswordAlert" destination="lJR-pu-9Ri" eventType="touchUpInside" id="vN3-GE-8MS"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -76,10 +85,31 @@
                             <constraint firstItem="woG-R0-Ngi" firstAttribute="leading" secondItem="Nsg-yi-DkU" secondAttribute="leading" constant="30" id="uJU-wl-qve"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Jq7-R6-77W"/>
+                    <connections>
+                        <outlet property="logInLabel" destination="szw-vA-FnA" id="wrf-cC-BhM"/>
+                        <outlet property="passwordOutlet" destination="v2u-su-8Qj" id="Fnt-5F-TEx"/>
+                        <outlet property="usernameOutlet" destination="Uw4-Ec-XTJ" id="Het-ju-feA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3J5-hc-1vs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="408.69565217391306" y="103.79464285714285"/>
+            <point key="canvasLocation" x="2292" y="103.44827586206897"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Lrb-Hn-N8K">
+            <objects>
+                <viewController id="adK-sy-xUv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1P7-mH-ei6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="QMh-C5-H89"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QgY-S2-e4T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3052" y="102.70935960591133"/>
         </scene>
     </scenes>
     <resources>
@@ -88,6 +118,9 @@
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
