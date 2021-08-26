@@ -43,6 +43,7 @@
                                 </state>
                                 <connections>
                                     <action selector="logInAction" destination="lJR-pu-9Ri" eventType="touchUpInside" id="BYM-EO-Bf0"/>
+                                    <segue destination="adK-sy-xUv" kind="show" id="grf-o9-AnH"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="woG-R0-Ngi">
@@ -96,18 +97,62 @@
             </objects>
             <point key="canvasLocation" x="2292" y="103.44827586206897"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="Lrb-Hn-N8K">
             <objects>
-                <viewController id="adK-sy-xUv" sceneMemberID="viewController">
+                <viewController id="adK-sy-xUv" customClass="WelcomeViewController" customModule="loginMenuApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1P7-mH-ei6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIM-Vc-z27">
+                                <rect key="frame" x="127" y="352" width="121" height="54"/>
+                                <color key="backgroundColor" red="0.26209461899999997" green="0.26209461899999997" blue="0.26209461899999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="Un9-W2-k0l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="tintColor" systemColor="systemGray3Color"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <segue destination="om0-hJ-1Sz" kind="unwind" unwindAction="unwindFor:" id="dEd-ze-xp3"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="stP-wi-moq">
+                                <rect key="frame" x="68" y="150" width="239" height="48"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hii, " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDW-mN-krC">
+                                        <rect key="frame" x="0.0" y="0.0" width="61.333333333333336" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4v4-9y-YCi">
+                                        <rect key="frame" x="63.333333333333357" y="0.0" width="175.66666666666663" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="QMh-C5-H89"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.74309139810000002" green="0.73092049429999995" blue="0.96848052740000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="jIM-Vc-z27" firstAttribute="centerY" secondItem="1P7-mH-ei6" secondAttribute="centerY" id="SLR-uA-pfW"/>
+                            <constraint firstItem="stP-wi-moq" firstAttribute="centerX" secondItem="1P7-mH-ei6" secondAttribute="centerX" id="UvI-hZ-Bmm"/>
+                            <constraint firstItem="jIM-Vc-z27" firstAttribute="centerX" secondItem="1P7-mH-ei6" secondAttribute="centerX" id="xjB-yj-V1k"/>
+                            <constraint firstItem="stP-wi-moq" firstAttribute="top" secondItem="QMh-C5-H89" secondAttribute="top" constant="150" id="z80-He-0pk"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="P8l-02-etJ"/>
+                    <connections>
+                        <outlet property="logOutLabel" destination="jIM-Vc-z27" id="b0l-nT-r3e"/>
+                        <outlet property="userNameLabel" destination="4v4-9y-YCi" id="ea1-jz-Fsg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QgY-S2-e4T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="om0-hJ-1Sz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3052" y="102.70935960591133"/>
         </scene>
@@ -119,8 +164,8 @@
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
