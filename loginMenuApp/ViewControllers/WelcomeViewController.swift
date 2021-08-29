@@ -21,5 +21,4 @@ class WelcomeViewController: UIViewController {
         
         userNameLabel.text = userNameLabelData
     }
-    
 }

@@ -39,6 +39,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F40C081326DC176000F32CE6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F42556DA26D79C5F00D13470 /* WelcomeViewController.swift */,
+				F46B571F26D6D93D00CF8215 /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F40C081426DC178B00F32CE6 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F46B571126D6D71600CF8215 /* Main.storyboard */,
+				F46B571626D6D71600CF8215 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F40C081526DC17A800F32CE6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F46B571426D6D71600CF8215 /* Assets.xcassets */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F40C081626DC17C700F32CE6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F46B570B26D6D71600CF8215 /* AppDelegate.swift */,
+				F46B570D26D6D71600CF8215 /* SceneDelegate.swift */,
+				F46B571926D6D71600CF8215 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		F46B56FF26D6D71600CF8215 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +94,10 @@
 		F46B570A26D6D71600CF8215 /* loginMenuApp */ = {
 			isa = PBXGroup;
 			children = (
-				F46B570B26D6D71600CF8215 /* AppDelegate.swift */,
-				F46B570D26D6D71600CF8215 /* SceneDelegate.swift */,
-				F46B571126D6D71600CF8215 /* Main.storyboard */,
-				F42556DA26D79C5F00D13470 /* WelcomeViewController.swift */,
-				F46B571F26D6D93D00CF8215 /* LoginViewController.swift */,
-				F46B571426D6D71600CF8215 /* Assets.xcassets */,
-				F46B571626D6D71600CF8215 /* LaunchScreen.storyboard */,
-				F46B571926D6D71600CF8215 /* Info.plist */,
+				F40C081326DC176000F32CE6 /* ViewControllers */,
+				F40C081426DC178B00F32CE6 /* Storyboard */,
+				F40C081526DC17A800F32CE6 /* Data */,
+				F40C081626DC17C700F32CE6 /* App */,
 			);
 			path = loginMenuApp;
 			sourceTree = "<group>";
@@ -292,7 +324,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z88UC283VS;
-				INFOPLIST_FILE = loginMenuApp/Info.plist;
+				INFOPLIST_FILE = loginMenuApp/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +343,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z88UC283VS;
-				INFOPLIST_FILE = loginMenuApp/Info.plist;
+				INFOPLIST_FILE = loginMenuApp/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
