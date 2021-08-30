@@ -16,7 +16,8 @@ class LoginViewController: UIViewController {
     @IBOutlet var logInLabel: UIButton!
     
     // MARK: - Private properties
-    private let firstUser = UserInfo()
+    private let firstUser = UserInfo.GetUserInfo()
+
     
     // MARK: Boot parameters
     override func viewDidLoad() {
@@ -34,10 +35,8 @@ class LoginViewController: UIViewController {
                 welcomeVC.userNameLabelData = usernameOutlet.text
                 
             } else if let infoWC = viewController as? MoreInfoViewController {
-                let user = UserInfo()
-                infoWC.surName = user.surname
-                infoWC.userName = user.name
-                infoWC.userInfo = user.moreInfo
+                infoWC.personOne = firstUser.person
+                
             }
         }
         
@@ -45,14 +44,14 @@ class LoginViewController: UIViewController {
     
     // MARK: IBActions
     @IBAction func forgotUsernameAlert() {
-        alertAction("Forgot Name", "Your username is: Username")
+        alertAction("Forgot Name", "Your username is: \(firstUser.userName)")
         
     }
     @IBAction func forgotPasswordAlert() {
-        alertAction("Forgot Password", "Your password is: Password")
+        alertAction("Forgot Password", "Your password is: \(firstUser.password)")
     }
     @IBAction func logInAction() {
-        if usernameOutlet.text != firstUser.name || passwordOutlet.text != firstUser.password {
+        if usernameOutlet.text != firstUser.userName || passwordOutlet.text != firstUser.password {
                 alertAction("Wrong Password or Username", "Click Forgot Password and Forgot Username")
                 passwordOutlet.text = ""
             }

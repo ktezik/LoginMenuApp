@@ -9,8 +9,17 @@ import Foundation
 
 
 struct UserInfo {
-    let name = "Username"
+    let userName = "Username"
     let password = "Password"
+    let person = UserPerson()
+    
+    static func GetUserInfo() -> UserInfo {
+        UserInfo()
+    }
+}
+
+struct UserPerson {
+    let name = "YAR!K"
     let surname = "Surname"
     let moreInfo = "I was born in NewYork, me 22, i love footboal"
 }

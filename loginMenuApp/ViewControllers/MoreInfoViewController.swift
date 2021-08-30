@@ -13,17 +13,13 @@ class MoreInfoViewController: UIViewController {
     @IBOutlet var userSurNameLabel: UILabel!
     @IBOutlet var userMoreInfoLabel: UILabel!
     
-    var userName: String!
-    var surName: String!
-    var userInfo: String!
-    
-    let userInfoHadd = UserInfo()
+    var personOne: UserPerson!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameLabel.text = userName
-        userSurNameLabel.text = surName
-        userMoreInfoLabel.text = userInfo
+        userNameLabel.text = personOne.name
+        userSurNameLabel.text = personOne.surname
+        userMoreInfoLabel.text = personOne.moreInfo
     }
 
 }
