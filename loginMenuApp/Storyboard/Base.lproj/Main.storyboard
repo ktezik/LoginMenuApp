@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hnB-Nk-qve">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lJR-pu-9Ri">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -43,7 +43,7 @@
                                 </state>
                                 <connections>
                                     <action selector="logInAction" destination="lJR-pu-9Ri" eventType="touchUpInside" id="BYM-EO-Bf0"/>
-                                    <segue destination="sep-iW-Iea" kind="show" id="grf-o9-AnH"/>
+                                    <segue destination="sep-iW-Iea" kind="presentation" modalPresentationStyle="fullScreen" id="grf-o9-AnH"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="woG-R0-Ngi">
@@ -157,23 +157,6 @@
             </objects>
             <point key="canvasLocation" x="4807.5" y="-218.66197183098592"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="zT5-fc-xji">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="hnB-Nk-qve" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Rp-KQ-f0g">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="lJR-pu-9Ri" kind="relationship" relationship="rootViewController" id="Ggx-1i-c4o"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hBK-98-Xap" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2478" y="103"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5pl-WE-ufQ">
             <objects>
@@ -196,14 +179,52 @@
         <!--MyInfo-->
         <scene sceneID="PQH-wm-0ew">
             <objects>
-                <viewController id="95d-V4-Pwq" sceneMemberID="viewController">
+                <viewController id="95d-V4-Pwq" customClass="MoreInfoViewController" customModule="loginMenuApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZGt-vc-nRM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iAH-2q-8Yc">
+                                <rect key="frame" x="50" y="100" width="220" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grp-mL-QIy">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W62-SF-xWD">
+                                        <rect key="frame" x="120" y="0.0" width="100" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFO-9o-kDR">
+                                <rect key="frame" x="85" y="180" width="150" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8nl-PE-WYU"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yFO-9o-kDR" firstAttribute="top" secondItem="iAH-2q-8Yc" secondAttribute="bottom" constant="50" id="1NF-MF-UL9"/>
+                            <constraint firstItem="8nl-PE-WYU" firstAttribute="trailing" secondItem="iAH-2q-8Yc" secondAttribute="trailing" constant="50" id="3Am-s8-5I3"/>
+                            <constraint firstItem="8nl-PE-WYU" firstAttribute="trailing" secondItem="yFO-9o-kDR" secondAttribute="trailing" constant="85" id="3FX-ps-UPu"/>
+                            <constraint firstItem="iAH-2q-8Yc" firstAttribute="top" secondItem="8nl-PE-WYU" secondAttribute="top" constant="100" id="7bd-Uz-Ol0"/>
+                            <constraint firstItem="iAH-2q-8Yc" firstAttribute="leading" secondItem="8nl-PE-WYU" secondAttribute="leading" constant="50" id="NeF-06-y8M"/>
+                            <constraint firstItem="yFO-9o-kDR" firstAttribute="leading" secondItem="8nl-PE-WYU" secondAttribute="leading" constant="85" id="w6a-p7-upc"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="MyInfo" image="person.fill" catalog="system" id="qtS-Du-UIi"/>
+                    <connections>
+                        <outlet property="userMoreInfoLabel" destination="yFO-9o-kDR" id="1U8-lO-AjO"/>
+                        <outlet property="userNameLabel" destination="grp-mL-QIy" id="yYA-L9-wGr"/>
+                        <outlet property="userSurNameLabel" destination="W62-SF-xWD" id="ALi-qI-mM9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZTb-cc-2fN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -218,9 +239,6 @@
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

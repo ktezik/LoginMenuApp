@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F42556DB26D79C5F00D13470 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42556DA26D79C5F00D13470 /* WelcomeViewController.swift */; };
 		F42AF35126DCE97B00936A4F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AF35026DCE97B00936A4F /* User.swift */; };
+		F42AF35326DCECA400936A4F /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AF35226DCECA400936A4F /* MoreInfoViewController.swift */; };
 		F46B570C26D6D71600CF8215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B570B26D6D71600CF8215 /* AppDelegate.swift */; };
 		F46B570E26D6D71600CF8215 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B570D26D6D71600CF8215 /* SceneDelegate.swift */; };
 		F46B571326D6D71600CF8215 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F46B571126D6D71600CF8215 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		F42556DA26D79C5F00D13470 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		F42AF35026DCE97B00936A4F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F42AF35226DCECA400936A4F /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
 		F46B570826D6D71600CF8215 /* loginMenuApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loginMenuApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46B570B26D6D71600CF8215 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F46B570D26D6D71600CF8215 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +48,7 @@
 			children = (
 				F42556DA26D79C5F00D13470 /* WelcomeViewController.swift */,
 				F46B571F26D6D93D00CF8215 /* LoginViewController.swift */,
+				F42AF35226DCECA400936A4F /* MoreInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				F46B572026D6D93D00CF8215 /* LoginViewController.swift in Sources */,
 				F42556DB26D79C5F00D13470 /* WelcomeViewController.swift in Sources */,
 				F46B570C26D6D71600CF8215 /* AppDelegate.swift in Sources */,
+				F42AF35326DCECA400936A4F /* MoreInfoViewController.swift in Sources */,
 				F42AF35126DCE97B00936A4F /* User.swift in Sources */,
 				F46B570E26D6D71600CF8215 /* SceneDelegate.swift in Sources */,
 			);

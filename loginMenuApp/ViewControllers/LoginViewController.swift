@@ -14,13 +14,29 @@ class LoginViewController: UIViewController {
     
     @IBOutlet var logInLabel: UIButton!
     
+    private let firstUser = UserInfo()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         logInLabel.layer.cornerRadius = 10
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcome = segue.destination as? WelcomeViewController else { return }
-        welcome.userNameLabelData = usernameOutlet.text
+        guard let welcome = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = welcome.viewControllers else { return }
+
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userNameLabelData = usernameOutlet.text
+                
+            } else if let infoWC = viewController as? MoreInfoViewController {
+                let user = UserInfo()
+                infoWC.surName = user.surname
+                infoWC.userName = user.name
+                infoWC.userInfo = user.moreInfo
+            }
+        }
+        
     }
     
     @IBAction func forgotUsernameAlert() {
@@ -31,9 +47,9 @@ class LoginViewController: UIViewController {
         alertAction("Forgot Password", "Your password is: Password")
     }
     @IBAction func logInAction() {
-        if usernameOutlet.text == "Username" && passwordOutlet.text == "Password" {
-//            alertAction("Nice", "You In")
-        } else {
+        if usernameOutlet.text != firstUser.name || passwordOutlet.text != firstUser.password {
+            
+            } else {
             alertAction("Wrong Password or Username", "Click Forgot Password and Forgot Username")
             passwordOutlet.text = ""
         }
