@@ -9,7 +9,7 @@ import Foundation
 
 
 struct UserInfo {
-    let name = "Name"
+    let name = "Username"
     let password = "Password"
     let surname = "Surname"
     let moreInfo = "I was born in NewYork, me 22, i love footboal"
